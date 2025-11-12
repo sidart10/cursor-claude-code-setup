@@ -1,14 +1,14 @@
-# Cursor Claude Setup 2025 - NPX Installer
+# Cursor Claude Setup 2025
 
-**One-command installation for Context Engineering Mastery course**
+**One-command setup for Cursor & Claude Code with MCP servers, Context Engineering commands, and BMAD Framework**
 
-Automated setup for complete AI development stack:
+Automated configuration for AI-powered development:
 
-- Cursor IDE configuration
-- Claude Code CLI with MCP servers
-- Archon MCP Server (Docker + Supabase)
-- Serena MCP Server (symbolic code tools)
-- BMAD Framework (optional, 12 agents + 34 workflows)
+- ✅ **MCP Servers** - Auto-configure Exa, Firecrawl, and Serena
+- ✅ **Dual-Client Commands** - Context Engineering slash commands for both Cursor and Claude Code
+- ✅ **Safe Merging** - Preserve your existing configs with timestamped backups
+- ✅ **No API Prompts** - Add keys later via clear instructions
+- ✅ **BMAD Framework** - 12 AI agents + 34 workflows (optional)
 
 ---
 
@@ -18,306 +18,269 @@ Automated setup for complete AI development stack:
 npx cursor-claude-setup-2025
 ```
 
-Follow the interactive prompts (~5 minutes)
-Installation completes in ~20 minutes
+**Time**: ~15-20 minutes  
+**Prompts**: Name, component selection, workspace creation  
+**Result**: Both Cursor and Claude Code configured and ready to use
 
 ---
 
-## What It Installs
+## What Gets Configured
 
-### Cursor IDE Configuration
+### 1. MCP Servers (Auto-Configured)
 
-- Global `.cursorrules` file (context engineering best practices)
-- Workspace settings template
-- Model selection guidelines
+**Three powerful MCP servers installed automatically**:
 
-### Claude Code CLI
+- **Exa** - AI-powered web search
+- **Firecrawl** - Web crawling and scraping
+- **Serena** - Symbolic code operations
 
-- API key configuration
-- MCP server integration (Archon + Serena)
-- CLAUDE.md template for projects
+**Configured in**:
+- `./.mcp.json` (project-level)
+- `~/.cursor/mcp.json` (Cursor global - merged with backup)
+- `~/.claude/config.json` (Claude Code global - merged with backup)
 
-### Archon MCP Server (Optional)
+### 2. Context Engineering Commands (Both Clients)
 
-- Docker container orchestration
-- Supabase database setup (requires manual SQL migration)
-- Web UI at http://localhost:3737
-- MCP server at http://localhost:8051
+**PRP (Problem-Requirements-Plan) workflow commands**:
 
-### Serena MCP Server
+- `/generate-prp` - Research and create comprehensive implementation plans
+- `/execute-prp` - Execute plans with validation and iteration
 
-- `uv` package manager installation
-- Serena MCP configuration for Claude Code
-- Symbol-level code operation tools
+**Installed for**:
+- `.claude/commands/` (Claude Code)
+- `.cursor/commands/` (Cursor)
 
-### BMAD Framework (Optional)
+**Source**: [coleam00/context-engineering-intro](https://github.com/coleam00/context-engineering-intro)
 
-- Runs `npx bmad-method@alpha install`
-- Interactive installer for module selection
-- 12 specialized AI agents
-- 34 workflows across 4 phases
+### 3. Global Configurations
+
+- `~/.cursorrules` - Cursor best practices (personalized)
+- API key placeholders (add via `.mcp.env.example`)
+- Environment variable guidance
+
+### 4. Optional Components
+
+- **BMAD Framework** - Multi-agent development system (12 agents, 34 workflows)
+- **Archon MCP** - Knowledge management with Docker + Supabase
+- **Workspace** - Organized folder structure for learning
 
 ---
 
 ## Prerequisites
 
 **Required**:
-
 - Node.js 18+ ([download](https://nodejs.org))
 - Cursor IDE ([download](https://cursor.com))
-- Claude Code CLI ([install guide](https://docs.claude.com/claude-code/installation))
+- Claude Code CLI ([install](https://docs.claude.com/claude-code/installation))
 
-**For Archon**:
-
+**Optional** (for Archon):
 - Docker Desktop ([download](https://docker.com/products/docker-desktop))
-- Supabase account ([sign up free](https://supabase.com))
-
-**API Keys**:
-
-- OpenAI API key ([get key](https://platform.openai.com/api-keys))
-- Anthropic API key ([get key](https://console.anthropic.com))
+- Supabase account ([sign up](https://supabase.com))
 
 ---
 
-## Interactive Prompts
+## What You Get
 
-The installer will ask you for:
-
-1. **Your name** (for personalized config)
-2. **OpenAI API key** (for Cursor & Archon)
-3. **Anthropic API key** (for Claude Code)
-4. **Supabase URL & key** (if installing Archon)
-5. **Component selection** (checkboxes):
-   - Cursor IDE configuration
-   - Claude Code CLI
-   - Archon MCP Server
-   - Serena MCP Server
-   - BMAD Framework
-6. **Workspace creation** (yes/no)
-7. **Open docs** (yes/no)
-
----
-
-## What Gets Created
-
-### Files Created
-
-**In Your Home Directory**:
+### MCP Configuration Files:
 
 ```
-~/
-├── .cursorrules                      # Global Cursor rules
-├── .claude/
-│   └── config.json                   # Claude Code config + MCP servers
-└── cursor-claude-course/
-    ├── archon/                       # Archon installation
-    ├── README.md                     # Workspace guide
-    ├── .course-progress.json         # Progress tracker
-    ├── week-1-foundations/
-    ├── week-2-cursor-advanced/
-    ├── week-3-claude-mastery/
-    ├── week-4-mcp-ecosystem/
-    ├── week-5-context-engineering/
-    ├── week-6-prp-bmad-advanced/
-    ├── week-7-production/
-    ├── week-8-advanced/
-    ├── capstone-projects/
-    ├── resources/
-    └── notes/
+Project:
+├── .mcp.json              # Exa, Firecrawl, Serena configured
+└── .mcp.env.example       # API key template
+
+Global:
+├── ~/.cursor/mcp.json     # Merged (backed up first)
+├── ~/.claude/config.json  # Merged (backed up first)
+└── ~/.claude/README-MCP-ENV.md  # Key export instructions
 ```
 
-**Templates Generated** (in installer directory):
+### Context Engineering Commands:
 
-- `templates/.cursorrules.template`
-- `templates/CLAUDE.md.template`
-- `templates/cursor-workspace-settings.json`
+```
+Project:
+├── .claude/commands/
+│   ├── generate-prp.md    # Create implementation plans
+│   └── execute-prp.md     # Execute with validation
+│
+└── .cursor/commands/
+    ├── generate-prp.md    # Same commands, both clients
+    └── execute-prp.md     # Unified workflow
+```
+
+### Guides:
+
+```
+templates/guides/
+├── CLAUDE-CODE-SETUP.md      # Claude Code installation
+├── CURSOR-SETUP.md           # Cursor MCP configuration
+├── GITHUB-INTEGRATION.md     # Git/GitHub setup
+└── SKILLS-QUICKSTART.md      # Skills via plugin marketplace
+```
 
 ---
 
-## Post-Installation
+## After Installation
 
-### Verification Steps
+### 1. Test Cursor
 
-**1. Test Cursor**:
+```bash
+# Open Cursor, create a file, try:
+/generate-prp
+# Should show the command prompt
+```
 
-- Open Cursor IDE
-- Create new JavaScript file
-- Type: `function calculate` and press Tab
-- Should see AI completion
-
-**2. Test Claude Code**:
+### 2. Test Claude Code
 
 ```bash
 claude "What MCP tools do I have available?"
-# Should list: archon, serena tools
+# Should list: exa, firecrawl, serena
 ```
 
-**3. Test Archon** (if installed):
-
-- Open http://localhost:3737
-- Complete onboarding
-- Crawl a documentation site
-- Test search
-
-**4. Test Serena**:
+### 3. Add API Keys
 
 ```bash
-cd ~/your-code-project
-claude "Use Serena to show me the symbol overview of main.py"
-# Should return structured symbol list
+# Export keys before using MCP servers
+export EXA_API_KEY=your-exa-key
+export FIRECRAWL_API_KEY=your-firecrawl-key
+
+# Then restart Claude Code or Cursor
 ```
 
-**5. Test BMAD** (if installed):
+**Placeholder locations**:
+- Project: `.mcp.env.example`
+- Configs: `${EXA_API_KEY}`, `${FIRECRAWL_API_KEY}`
 
-- Open Cursor or Claude Code
-- Load bmad-master agent
-- Run `*list-workflows`
-- Should show 34 workflows
+### 4. Optional: Install Skills
+
+```bash
+# In Claude Code, via plugin marketplace (recommended):
+/plugin marketplace add anthropics/skills
+/plugin install document-skills@anthropic-agent-skills
+
+# See templates/guides/SKILLS-QUICKSTART.md for details
+```
+
+---
+
+## Key Features
+
+### ✅ Safe & Secure
+
+- **No secrets collected** - API keys added via placeholders
+- **Backup before merge** - Your configs are timestamped and backed up
+- **Idempotent** - Safe to re-run without breaking existing setups
+- **No data loss** - Deep merge preserves your settings
+
+### ✅ Dual-Client Support
+
+- **Same MCP servers** for both Cursor and Claude Code
+- **Same commands** - unified workflow across clients
+- **Same guides** - consistent documentation
+
+### ✅ Smart Defaults
+
+- **Auto-configure** MCP servers (no manual JSON editing)
+- **Commands mandatory** - installed by default for both clients
+- **Skills optional** - guidance provided, install via plugin marketplace
+
+---
+
+## MCP Servers Included
+
+### Exa MCP
+- **What**: AI-powered web search
+- **Use**: Real-time information retrieval
+- **Requires**: EXA_API_KEY ([get key](https://exa.ai))
+
+### Firecrawl MCP
+- **What**: Web crawling and content extraction
+- **Use**: Scrape docs, extract data, map sites
+- **Requires**: FIRECRAWL_API_KEY ([get key](https://firecrawl.dev))
+
+### Serena MCP
+- **What**: Symbolic code operations
+- **Use**: Navigate large codebases, refactor safely
+- **Requires**: No API key (via uvx)
+- **Source**: [github.com/oraios/serena](https://github.com/oraios/serena)
+
+---
+
+## Context Engineering Commands
+
+### /generate-prp
+Research your codebase and external docs, then create a comprehensive PRP (Problem-Requirements-Plan) for implementation.
+
+**Features**:
+- Codebase pattern analysis
+- External documentation research
+- Implementation blueprint
+- Validation gates
+- Quality scoring
+
+### /execute-prp
+Execute a PRP with ULTRATHINK planning, todo-based execution, and iterative validation loops.
+
+**Features**:
+- Load complete context
+- Break down into todos
+- Execute with validation
+- Fix failures automatically
+- Report completion status
+
+**Source**: [coleam00/context-engineering-intro](https://github.com/coleam00/context-engineering-intro)
 
 ---
 
 ## Troubleshooting
 
-### Installer Fails
-
-**Check Prerequisites**:
+### MCP Servers Not Working
 
 ```bash
-node --version    # Should be 18+
-docker --version  # Should be installed
-claude --version  # Should be installed
-uv --version      # Should be installed (or will auto-install)
+# Check if keys are exported
+echo $EXA_API_KEY
+echo $FIRECRAWL_API_KEY
+
+# If empty, export them:
+export EXA_API_KEY=your-key
+export FIRECRAWL_API_KEY=your-key
+
+# Restart your client
 ```
 
-**Re-run Installer**:
+### Commands Not Showing
+
+**Cursor**:
+- Commands in `.cursor/commands/` should appear when you type `/`
+- Restart Cursor if not visible
+
+**Claude Code**:
+- Commands in `.claude/commands/` load automatically
+- Restart Claude Code if needed
+
+### Serena Not Available
 
 ```bash
-npx cursor-claude-setup-2025@latest
-```
-
-### Archon Won't Start
-
-**Check Docker**:
-
-```bash
-docker ps
-# Should show archon-ui, archon-server, archon-mcp, archon-agents
-```
-
-**Check Logs**:
-
-```bash
-cd ~/cursor-claude-course/archon
-docker compose logs -f
-```
-
-**Restart Archon**:
-
-```bash
-cd ~/cursor-claude-course/archon
-docker compose down
-docker compose up -d
-```
-
-### Serena Not Working
-
-**Check uv**:
-
-```bash
+# Check uv installation
 uv --version
-# If not found, install: curl -LsSf https://astral.sh/uv/install.sh | sh
-```
 
-**Test Serena Directly**:
+# If missing, install:
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-```bash
+# Test Serena
 uvx --from git+https://github.com/oraios/serena serena --help
 ```
-
-**Check Claude Code Config**:
-
-```bash
-cat ~/.claude/config.json
-# Should have "serena" in mcpServers
-```
-
-### Claude Code MCP Not Working
-
-**Verify Config**:
-
-```bash
-cat ~/.claude/config.json
-# Check JSON is valid
-# Check mcpServers section exists
-```
-
-**Test Connection**:
-
-```bash
-claude "List my MCP servers"
-# Should show archon and serena
-```
-
----
-
-## Manual Setup (If Installer Fails)
-
-### Cursor Configuration
-
-```bash
-# Create ~/.cursorrules
-# Copy content from templates/.cursorrules.template
-```
-
-### Claude Code MCP
-
-**Edit** `~/.claude/config.json`:
-
-```json
-{
-  "mcpServers": {
-    "archon": {
-      "command": "http",
-      "args": {
-        "url": "http://localhost:8051"
-      }
-    },
-    "serena": {
-      "command": "uvx",
-      "args": ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant"]
-    }
-  }
-}
-```
-
-### Archon Manual Setup
-
-See: [Archon Quick Start Guide](https://github.com/coleam00/Archon#quick-start)
-
-### Serena Manual Setup
-
-See: [Serena README](https://github.com/oraios/serena#quick-start)
-
----
-
-## Support
-
-**Course Platform**: https://github.com/sidart10/cursor-claude-code-course
-**GitHub Issues**: https://github.com/sidart10/cursor-claude-code-course/issues
-**Discord Community**: [Discord invite - coming soon]
-**Email**: contact@contextengineering.dev
 
 ---
 
 ## Development
 
-### Running Locally
+### Run Locally
 
 ```bash
 git clone https://github.com/sidart10/cursor-claude-code-course
-cd cursor-claude-setup-2025
+cd cursor-claude-code-course
 npm install
-npm run setup  # Run installer locally
+node index.js
 ```
 
 ### Testing
@@ -326,28 +289,55 @@ npm run setup  # Run installer locally
 npm test
 ```
 
-### Publishing
+---
 
-```bash
-npm version patch  # or minor, major
-npm publish
-```
+## Resources
+
+**MCP Ecosystem**:
+- [MCP Best Practices](https://modelcontextprotocol.info/docs/best-practices/)
+- [MCP Executables Guide](https://dev.to/leomarsh/mcp-server-executables-explained-npx-uvx-docker-and-beyond-1i1n)
+
+**Context Engineering**:
+- [Commands Source](https://github.com/coleam00/context-engineering-intro)
+- [Cole's YouTube](https://youtube.com/@ColeMedin)
+
+**Claude Skills**:
+- [Official Skills](https://github.com/anthropics/skills)
+- [Using Skills Guide](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+- [Community Skills](https://github.com/ComposioHQ/awesome-claude-skills)
+
+**BMAD Framework**:
+- [Official Repo](https://github.com/bmad-code-org/BMAD-METHOD)
+- [Documentation](https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/src/modules/bmm/docs/README.md)
+
+---
+
+## Support
+
+**Issues**: [GitHub Issues](https://github.com/sidart10/cursor-claude-code-course/issues)  
+**Documentation**: [Full Docs](https://github.com/sidart10/cursor-claude-code-course)  
+**Contact**: contact@contextengineering.dev
 
 ---
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT License - See [LICENSE](./LICENSE) file
 
 ---
 
 ## Credits
 
-**Inspired by**:
+**Built by**: [Sid Dani](https://github.com/sidart10)
 
+**Inspired by**:
 - [BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) installer pattern
 - [Archon](https://github.com/coleam00/Archon) setup process
 - [Serena](https://github.com/oraios/serena) installation approach
+- [Context Engineering Intro](https://github.com/coleam00/context-engineering-intro) commands
 
-**Built for**: Context Engineering Mastery 2025 course
-**Maintainer**: [Your name/org]
+**Special thanks**: Cole Medin for Context Engineering patterns and methodology
+
+---
+
+**v1.1.0** - Auto MCP config, dual-client commands, organized structure
