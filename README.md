@@ -1,14 +1,14 @@
 # Cursor Claude Setup 2025
 
-**One-command setup for Cursor & Claude Code with MCP servers, Context Engineering commands, and BMAD Framework**
+**One-command setup for Cursor & Claude Code with auto-configured MCP servers and BMAD Framework**
 
 Automated configuration for AI-powered development:
 
 - ✅ **MCP Servers** - Auto-configure Exa, Firecrawl, and Serena
-- ✅ **Dual-Client Commands** - Context Engineering slash commands for both Cursor and Claude Code
 - ✅ **Safe Merging** - Preserve your existing configs with timestamped backups
-- ✅ **No API Prompts** - Add keys later via clear instructions
-- ✅ **BMAD Framework** - 12 AI agents + 34 workflows (optional)
+- ✅ **BMAD Framework** - 12 AI agents + 34 workflows (enabled by default)
+- ✅ **Bonus Commands** - 2 PRP workflow commands for both clients
+- ✅ **Cheat Sheets** - 6 reference guides + 3 module guides bundled
 
 ---
 
@@ -221,27 +221,11 @@ export FIRECRAWL_API_KEY=your-firecrawl-key
 
 ---
 
-## Context Engineering Commands
+## Bonus: Context Engineering Commands
 
-### /generate-prp
-Research your codebase and external docs, then create a comprehensive PRP (Problem-Requirements-Plan) for implementation.
-
-**Features**:
-- Codebase pattern analysis
-- External documentation research
-- Implementation blueprint
-- Validation gates
-- Quality scoring
-
-### /execute-prp
-Execute a PRP with ULTRATHINK planning, todo-based execution, and iterative validation loops.
-
-**Features**:
-- Load complete context
-- Break down into todos
-- Execute with validation
-- Fix failures automatically
-- Report completion status
+Two additional slash commands for both clients:
+- `/generate-prp` - Create implementation plans
+- `/execute-prp` - Execute plans with validation
 
 **Source**: [coleam00/context-engineering-intro](https://github.com/coleam00/context-engineering-intro)
 

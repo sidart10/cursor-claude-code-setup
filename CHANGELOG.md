@@ -4,6 +4,31 @@ All notable changes to cursor-claude-setup-2025 installer.
 
 ---
 
+## [1.1.4] - 2025-11-12
+
+### Changed
+
+- **Reorganized cheat sheets**: Moved 3 module-specific sheets to templates/guides/
+  - cheat-sheets/ now has 6 core references
+  - guides/ now has 7 files (4 setup guides + 3 module guides)
+
+- **De-emphasized PRP commands**: Fixed over-promotion of 2 bonus commands
+  - README: PRP commands now under "Bonus" section (not main feature)
+  - index.js: PRP mentioned as bonus, not highlighted
+  - Package description: Removed "Context Engineering commands" from main pitch
+  - Focus restored to: MCP servers + BMAD (the real powerhouses)
+
+- **Updated package.json description**: Now highlights MCP + BMAD, not PRP commands
+
+### Fixed
+
+- **Messaging accuracy**: PRP commands are 2 bonus slash commands, not centerpiece
+  - BMAD has 34 workflows (much more significant)
+  - MCP servers (Exa, Firecrawl, Serena) are the core automation
+  - PRP is just a small add-on
+
+---
+
 ## [1.1.3] - 2025-11-12
 
 ### Added
