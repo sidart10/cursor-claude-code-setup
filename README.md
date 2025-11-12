@@ -68,8 +68,29 @@ npx cursor-claude-setup-2025
 
 ## Prerequisites
 
+### Step 1: Install Node.js (if you don't have npm/npx)
+
+**Check if you have it**:
+```bash
+node --version
+npm --version
+```
+
+**If missing, install Node.js**:
+- **Download**: [nodejs.org](https://nodejs.org) (v18 or higher)
+- **macOS** (via Homebrew): `brew install node`
+- **Windows**: Download .msi installer from nodejs.org
+- **Linux**: `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs`
+
+**After installation**:
+```bash
+node --version  # Should show v18.x or higher
+npx --version   # Should work (included with Node.js)
+```
+
+### Step 2: Other Requirements
+
 **Required**:
-- Node.js 18+ ([download](https://nodejs.org))
 - Cursor IDE ([download](https://cursor.com))
 - Claude Code CLI ([install](https://docs.claude.com/claude-code/installation))
 
