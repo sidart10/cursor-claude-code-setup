@@ -4,6 +4,41 @@ All notable changes to cursor-claude-setup-2025 installer.
 
 ---
 
+## [1.1.3] - 2025-11-12
+
+### Added
+
+- **Cheat Sheets Bundled**: 9 reference guides included in templates/cheat-sheets/
+  - 01-cursor-keyboard-shortcuts.md
+  - 02-claude-code-commands.md
+  - 04-serena-symbol-operations.md
+  - 05-context-engineering-patterns.md
+  - 06-prp-methodology.md
+  - 07-bmad-workflows-reference.md
+  - module-02-cursor-advanced-cheat-sheet.md
+  - module-03-claude-code-mastery-cheat-sheet.md
+  - module-04-mcp-ecosystem-cheat-sheet.md
+
+- **INSTALL-NODE.md**: AI-friendly Node.js installation guide
+  - Platform-specific commands (macOS, Windows, Linux)
+  - Verification steps
+  - Troubleshooting common issues
+  - Designed for Cursor/Claude Code to help users install
+
+### Changed
+
+- **Removed all Archon/Docker references** from README.md
+  - Removed from Optional Components section
+  - Removed from Prerequisites section
+  - Removed from Credits section
+  - README now focuses on core features (Exa, Firecrawl, Serena)
+
+- **Updated index.js comments**: Removed outdated Archon-centric descriptions
+- **Installer Next Steps**: Now mentions bundled cheat sheets
+- **Cleaned cheat sheets**: Removed Archon references from all 9 bundled sheets
+
+---
+
 ## [1.1.2] - 2025-11-12
 
 ### Documentation

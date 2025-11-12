@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * Context Engineering Mastery 2025 - Automated Setup
+ * Cursor Claude Setup 2025 - Automated Configuration
  *
- * One-command installation for complete AI development stack:
- * - Cursor IDE configuration
- * - Claude Code CLI with MCP servers
- * - Archon MCP Server (Docker + Supabase)
- * - Serena MCP Server (symbolic code tools)
- * - BMAD Framework (optional)
+ * One-command installation for AI development stack:
+ * - MCP Servers (Exa, Firecrawl, Serena) - auto-configured
+ * - Context Engineering Commands - for Cursor & Claude Code
+ * - Cursor IDE configuration (global .cursorrules)
+ * - Claude Code CLI with MCP integration
+ * - BMAD Framework (12 agents, 34 workflows)
  *
  * Usage: npx cursor-claude-setup-2025
  *
@@ -54,7 +54,7 @@ const banner = `
 `;
 
 console.log(chalk.cyan.bold(banner));
-console.log(chalk.gray('One-command installation for Cursor, Claude Code, MCP servers & BMAD\n'));
+console.log(chalk.gray('Auto-configure MCP servers (Exa, Firecrawl, Serena), install commands for both clients\n'));
 
 /**
  * Main installation flow
@@ -303,7 +303,18 @@ async function main() {
     console.log(chalk.gray('   /plugin install document-skills@anthropic-agent-skills\n'));
     console.log(chalk.white('   See templates/guides/SKILLS-QUICKSTART.md for details.\n'));
 
-    console.log(chalk.green.bold('🎉 Setup complete! Commands installed for both Claude Code and Cursor.\n'));
+    // Cheat sheets installed
+    console.log(chalk.cyan.bold('📚 Cheat Sheets Included\n'));
+    console.log(chalk.white('   9 reference guides in templates/cheat-sheets/:'));
+    console.log(chalk.gray('   • Cursor keyboard shortcuts'));
+    console.log(chalk.gray('   • Claude Code commands'));
+    console.log(chalk.gray('   • Serena symbol operations'));
+    console.log(chalk.gray('   • Context Engineering patterns'));
+    console.log(chalk.gray('   • PRP methodology'));
+    console.log(chalk.gray('   • BMAD workflows reference'));
+    console.log(chalk.gray('   • Module-specific cheat sheets (Cursor, Claude, MCP)\n'));
+
+    console.log(chalk.green.bold('🎉 Setup complete! Commands and cheat sheets ready for both clients.\n'));
 
     // Open docs if requested
     if (answers.openDocs) {

@@ -61,7 +61,6 @@ npx cursor-claude-setup-2025
 ### 4. Optional Components
 
 - **BMAD Framework** - Multi-agent development system (12 agents, 34 workflows)
-- **Archon MCP** - Knowledge management with Docker + Supabase
 - **Workspace** - Organized folder structure for learning
 
 ---
@@ -93,10 +92,6 @@ npx --version   # Should work (included with Node.js)
 **Required**:
 - Cursor IDE ([download](https://cursor.com))
 - Claude Code CLI ([install](https://docs.claude.com/claude-code/installation))
-
-**Optional** (for Archon):
-- Docker Desktop ([download](https://docker.com/products/docker-desktop))
-- Supabase account ([sign up](https://supabase.com))
 
 ---
 
@@ -353,7 +348,6 @@ MIT License - See [LICENSE](./LICENSE) file
 
 **Inspired by**:
 - [BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) installer pattern
-- [Archon](https://github.com/coleam00/Archon) setup process
 - [Serena](https://github.com/oraios/serena) installation approach
 - [Context Engineering Intro](https://github.com/coleam00/context-engineering-intro) commands
 
