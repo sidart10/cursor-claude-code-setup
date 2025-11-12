@@ -1,342 +1,200 @@
-# Cursor Claude Setup 2025
+# cursor-claude-setup-2025
 
-**One-command setup for Cursor & Claude Code with auto-configured MCP servers and BMAD Framework**
-
-Automated configuration for AI-powered development:
-
-- ✅ **MCP Servers** - Auto-configure Exa, Firecrawl, and Serena
-- ✅ **Safe Merging** - Preserve your existing configs with timestamped backups
-- ✅ **BMAD Framework** - 12 AI agents + 34 workflows (enabled by default)
-- ✅ **Bonus Commands** - 2 PRP workflow commands for both clients
-- ✅ **Cheat Sheets** - 6 reference guides + 3 module guides bundled
-
----
-
-## Quick Start
+Auto-configure MCP servers for Cursor and Claude Code, plus install BMAD Framework.
 
 ```bash
 npx cursor-claude-setup-2025
 ```
 
-**Time**: ~15-20 minutes  
-**Prompts**: Name, component selection, workspace creation  
-**Result**: Both Cursor and Claude Code configured and ready to use
-
 ---
 
-## What Gets Configured
+## What This Does
 
-### 1. MCP Servers (Auto-Configured)
+**Prompts you for**:
+1. Your name
+2. Which components to install (checkboxes - all selected by default):
+   - Cursor IDE configuration
+   - Claude Code CLI with MCP servers
+   - Serena MCP Server
+   - BMAD Framework
+3. Create workspace folder? (yes/no)
+4. Open docs when done? (yes/no)
 
-**Three powerful MCP servers installed automatically**:
-
-- **Exa** - AI-powered web search
-- **Firecrawl** - Web crawling and scraping
-- **Serena** - Symbolic code operations
-
-**Configured in**:
-- `./.mcp.json` (project-level)
-- `~/.cursor/mcp.json` (Cursor global - merged with backup)
-- `~/.claude/config.json` (Claude Code global - merged with backup)
-
-### 2. Context Engineering Commands (Both Clients)
-
-**PRP (Problem-Requirements-Plan) workflow commands**:
-
-- `/generate-prp` - Research and create comprehensive implementation plans
-- `/execute-prp` - Execute plans with validation and iteration
-
-**Installed for**:
-- `.claude/commands/` (Claude Code)
-- `.cursor/commands/` (Cursor)
-
-**Source**: [coleam00/context-engineering-intro](https://github.com/coleam00/context-engineering-intro)
-
-### 3. Global Configurations
-
-- `~/.cursorrules` - Cursor best practices (personalized)
-- API key placeholders (add via `.mcp.env.example`)
-- Environment variable guidance
-
-### 4. Optional Components
-
-- **BMAD Framework** - Multi-agent development system (12 agents, 34 workflows)
-- **Workspace** - Organized folder structure for learning
+**Then automatically**:
+1. Checks prerequisites (Node 18+, Claude CLI, uv for Serena)
+2. Installs selected components
+3. **Auto-configures MCP servers** (Exa, Firecrawl, Serena):
+   - Writes `./.mcp.json` (in your current directory)
+   - Merges `~/.cursor/mcp.json` (backs up first)
+   - Merges `~/.claude/config.json` (backs up first)
+4. **Installs 2 commands** for both Cursor and Claude Code:
+   - `.claude/commands/generate-prp.md`
+   - `.claude/commands/execute-prp.md`
+   - `.cursor/commands/generate-prp.md`
+   - `.cursor/commands/execute-prp.md`
+5. Optional: Creates ~/cursor-claude-course workspace
+6. Shows results and next steps
 
 ---
 
 ## Prerequisites
 
-### Step 1: Install Node.js (if you don't have npm/npx)
+**You need Node.js 18+** to run this installer (includes npm/npx).
 
-**Check if you have it**:
-```bash
-node --version
-npm --version
-```
+Don't have Node? See `docs/INSTALL-NODE.md` or ask Cursor/Claude Code to help you install it.
 
-**If missing, install Node.js**:
-- **Download**: [nodejs.org](https://nodejs.org) (v18 or higher)
-- **macOS** (via Homebrew): `brew install node`
-- **Windows**: Download .msi installer from nodejs.org
-- **Linux**: `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs`
-
-**After installation**:
-```bash
-node --version  # Should show v18.x or higher
-npx --version   # Should work (included with Node.js)
-```
-
-### Step 2: Other Requirements
-
-**Required**:
+**After running the installer, you'll need**:
 - Cursor IDE ([download](https://cursor.com))
-- Claude Code CLI ([install](https://docs.claude.com/claude-code/installation))
+- Claude Code CLI ([install](https://docs.claude.com/en/docs/claude-code/quickstart))
 
 ---
 
-## What You Get
+## Files Created
 
-### MCP Configuration Files:
-
+### In Your Current Directory (where you run npx):
 ```
-Project:
-├── .mcp.json              # Exa, Firecrawl, Serena configured
-└── .mcp.env.example       # API key template
-
-Global:
-├── ~/.cursor/mcp.json     # Merged (backed up first)
-├── ~/.claude/config.json  # Merged (backed up first)
-└── ~/.claude/README-MCP-ENV.md  # Key export instructions
+./
+├── .mcp.json                    # MCP config (Exa, Firecrawl, Serena)
+├── .mcp.env.example             # Where to add your API keys
+├── .claude/commands/            # 2 slash commands
+└── .cursor/commands/            # Same 2 commands
 ```
 
-### Context Engineering Commands:
-
+### Global (Home Directory):
 ```
-Project:
-├── .claude/commands/
-│   ├── generate-prp.md    # Create implementation plans
-│   └── execute-prp.md     # Execute with validation
-│
-└── .cursor/commands/
-    ├── generate-prp.md    # Same commands, both clients
-    └── execute-prp.md     # Unified workflow
+~/
+├── .cursorrules                 # Cursor config (personalized with your name)
+├── .cursor/mcp.json             # MCP servers (merged, backed up)
+├── .claude/config.json          # MCP servers (merged, backed up)
+└── .claude/README-MCP-ENV.md    # How to export API keys
 ```
 
-### Guides:
-
+### Optional Workspace:
 ```
-templates/guides/
-├── CLAUDE-CODE-SETUP.md      # Claude Code installation
-├── CURSOR-SETUP.md           # Cursor MCP configuration
-├── GITHUB-INTEGRATION.md     # Git/GitHub setup
-└── SKILLS-QUICKSTART.md      # Skills via plugin marketplace
+~/cursor-claude-course/
+├── week-1-foundations/
+├── week-2-cursor-advanced/
+├── ...8 week folders
+├── capstone-projects/
+├── resources/
+└── notes/
 ```
 
 ---
 
 ## After Installation
 
-### 1. Test Cursor
+### 1. Add API Keys
+
+The installer writes **placeholders** (`${EXA_API_KEY}`, `${FIRECRAWL_API_KEY}`) in your configs.
+
+**To use Exa and Firecrawl MCP servers**:
 
 ```bash
-# Open Cursor, create a file, try:
-/generate-prp
-# Should show the command prompt
+# macOS/Linux:
+export EXA_API_KEY=your-exa-api-key
+export FIRECRAWL_API_KEY=your-firecrawl-api-key
+
+# Windows PowerShell:
+$env:EXA_API_KEY="your-exa-api-key"
+$env:FIRECRAWL_API_KEY="your-firecrawl-api-key"
+
+# Then restart Cursor or Claude Code
 ```
 
-### 2. Test Claude Code
+Get keys:
+- Exa: https://exa.ai
+- Firecrawl: https://firecrawl.dev
 
+**Serena** doesn't need an API key.
+
+### 2. Test MCP Servers
+
+**In Claude Code**:
 ```bash
-claude "What MCP tools do I have available?"
+claude "What MCP tools do I have?"
 # Should list: exa, firecrawl, serena
 ```
 
-### 3. Add API Keys
+**In Cursor**:
+Open chat and ask: "What MCP tools are available?"
 
-```bash
-# Export keys before using MCP servers
-export EXA_API_KEY=your-exa-key
-export FIRECRAWL_API_KEY=your-firecrawl-key
+### 3. Try Slash Commands
 
-# Then restart Claude Code or Cursor
-```
+**In Cursor or Claude Code**:
+Type `/` and you should see:
+- `/generate-prp`
+- `/execute-prp`
 
-**Placeholder locations**:
-- Project: `.mcp.env.example`
-- Configs: `${EXA_API_KEY}`, `${FIRECRAWL_API_KEY}`
+### 4. Use BMAD Framework
 
-### 4. Optional: Install Skills
+**If you installed BMAD**:
 
-```bash
-# In Claude Code, via plugin marketplace (recommended):
-/plugin marketplace add anthropics/skills
-/plugin install document-skills@anthropic-agent-skills
+See the official quick start: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/src/modules/bmm/docs/quick-start.md
 
-# See templates/guides/SKILLS-QUICKSTART.md for details
-```
+Quick version:
+1. Load the Analyst agent in Cursor or Claude Code
+2. Run `*workflow-init`
+3. Follow the guided workflows
 
 ---
 
-## Key Features
+## What You Get
 
-### ✅ Safe & Secure
+**MCP Servers** (3):
+- **Exa** - AI web search (needs API key)
+- **Firecrawl** - Web scraping (needs API key)
+- **Serena** - Code navigation (no key needed)
 
-- **No secrets collected** - API keys added via placeholders
-- **Backup before merge** - Your configs are timestamped and backed up
-- **Idempotent** - Safe to re-run without breaking existing setups
-- **No data loss** - Deep merge preserves your settings
-
-### ✅ Dual-Client Support
-
-- **Same MCP servers** for both Cursor and Claude Code
-- **Same commands** - unified workflow across clients
-- **Same guides** - consistent documentation
-
-### ✅ Smart Defaults
-
-- **Auto-configure** MCP servers (no manual JSON editing)
-- **Commands mandatory** - installed by default for both clients
-- **Skills optional** - guidance provided, install via plugin marketplace
-
----
-
-## MCP Servers Included
-
-### Exa MCP
-- **What**: AI-powered web search
-- **Use**: Real-time information retrieval
-- **Requires**: EXA_API_KEY ([get key](https://exa.ai))
-
-### Firecrawl MCP
-- **What**: Web crawling and content extraction
-- **Use**: Scrape docs, extract data, map sites
-- **Requires**: FIRECRAWL_API_KEY ([get key](https://firecrawl.dev))
-
-### Serena MCP
-- **What**: Symbolic code operations
-- **Use**: Navigate large codebases, refactor safely
-- **Requires**: No API key (via uvx)
-- **Source**: [github.com/oraios/serena](https://github.com/oraios/serena)
-
----
-
-## Bonus: Context Engineering Commands
-
-Two additional slash commands for both clients:
+**Slash Commands** (2):
 - `/generate-prp` - Create implementation plans
 - `/execute-prp` - Execute plans with validation
 
-**Source**: [coleam00/context-engineering-intro](https://github.com/coleam00/context-engineering-intro)
+**BMAD Framework** (optional, enabled by default):
+- 12 AI agents (Analyst, PM, Architect, SM, DEV, etc.)
+- 34 workflows across 4 phases
+- See: https://github.com/bmad-code-org/BMAD-METHOD
+
+**Reference Materials** (bundled):
+- 6 cheat sheets (Cursor, Claude Code, Serena, Context Eng, PRP, BMAD)
+- 7 guides (setup guides + module guides)
+
+---
+
+## Config Merging
+
+The installer **merges** into your existing configs (doesn't overwrite):
+- Backs up `~/.cursor/mcp.json` → `~/.cursor/mcp.json.bak-TIMESTAMP`
+- Backs up `~/.claude/config.json` → `~/.claude/config.json.bak-TIMESTAMP`
+- Uses deep merge (preserves your existing servers)
+
+**Safe to re-run** if something fails.
 
 ---
 
 ## Troubleshooting
 
-### MCP Servers Not Working
+**"command not found: npx"**  
+→ Install Node.js first (see docs/INSTALL-NODE.md)
 
-```bash
-# Check if keys are exported
-echo $EXA_API_KEY
-echo $FIRECRAWL_API_KEY
+**MCP servers not working**  
+→ Export API keys (see step 1 above)
 
-# If empty, export them:
-export EXA_API_KEY=your-key
-export FIRECRAWL_API_KEY=your-key
+**Commands don't show in Cursor**  
+→ Restart Cursor
 
-# Restart your client
-```
-
-### Commands Not Showing
-
-**Cursor**:
-- Commands in `.cursor/commands/` should appear when you type `/`
-- Restart Cursor if not visible
-
-**Claude Code**:
-- Commands in `.claude/commands/` load automatically
-- Restart Claude Code if needed
-
-### Serena Not Available
-
-```bash
-# Check uv installation
-uv --version
-
-# If missing, install:
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# Test Serena
-uvx --from git+https://github.com/oraios/serena serena --help
-```
+**uv not found (for Serena)**  
+→ Install: `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
 ---
 
-## Development
+## Links
 
-### Run Locally
-
-```bash
-git clone https://github.com/sidart10/cursor-claude-code-course
-cd cursor-claude-code-course
-npm install
-node index.js
-```
-
-### Testing
-
-```bash
-npm test
-```
+- GitHub: https://github.com/sidart10/cursor-claude-code-course
+- Issues: https://github.com/sidart10/cursor-claude-code-course/issues
+- BMAD: https://github.com/bmad-code-org/BMAD-METHOD
+- Serena: https://github.com/oraios/serena
 
 ---
 
-## Resources
-
-**MCP Ecosystem**:
-- [MCP Best Practices](https://modelcontextprotocol.info/docs/best-practices/)
-- [MCP Executables Guide](https://dev.to/leomarsh/mcp-server-executables-explained-npx-uvx-docker-and-beyond-1i1n)
-
-**Context Engineering**:
-- [Commands Source](https://github.com/coleam00/context-engineering-intro)
-- [Cole's YouTube](https://youtube.com/@ColeMedin)
-
-**Claude Skills**:
-- [Official Skills](https://github.com/anthropics/skills)
-- [Using Skills Guide](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
-- [Community Skills](https://github.com/ComposioHQ/awesome-claude-skills)
-
-**BMAD Framework**:
-- [Official Repo](https://github.com/bmad-code-org/BMAD-METHOD)
-- [Documentation](https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/src/modules/bmm/docs/README.md)
-
----
-
-## Support
-
-**Issues**: [GitHub Issues](https://github.com/sidart10/cursor-claude-code-course/issues)  
-**Documentation**: [Full Docs](https://github.com/sidart10/cursor-claude-code-course)  
-**Contact**: contact@contextengineering.dev
-
----
-
-## License
-
-MIT License - See [LICENSE](./LICENSE) file
-
----
-
-## Credits
-
-**Built by**: [Sid Dani](https://github.com/sidart10)
-
-**Inspired by**:
-- [BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) installer pattern
-- [Serena](https://github.com/oraios/serena) installation approach
-- [Context Engineering Intro](https://github.com/coleam00/context-engineering-intro) commands
-
-**Special thanks**: Cole Medin for Context Engineering patterns and methodology
-
----
-
-**v1.1.0** - Auto MCP config, dual-client commands, organized structure
+MIT License
