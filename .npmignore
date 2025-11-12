@@ -1,0 +1,30 @@
+# Test files
+test/
+*.test.js
+
+# Development files
+.DS_Store
+*.log
+npm-debug.log*
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Internal documentation (exclude from npm package)
+docs/PACKAGE-HEALTH-CHECK.md
+docs/SKILLS-FIX-SUMMARY.md
+docs/INSTALLER-OVERVIEW.md
+docs/PACKAGE-FINAL-SUMMARY.md
+docs/TEST-REPORT.md
+
+# Temporary files
+tmp/
+temp/
+*.tmp
