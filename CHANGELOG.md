@@ -4,6 +4,17 @@ All notable changes to cursor-claude-setup-2025 installer.
 
 ---
 
+## [1.1.2] - 2025-11-12
+
+### Documentation
+
+- **Added Node.js installation instructions**: Clear guide for users without npm/npx
+  - Platform-specific install commands (macOS, Windows, Linux)
+  - Verification steps
+  - Prerequisite section reorganized for clarity
+
+---
+
 ## [1.1.1] - 2025-11-12
 
 ### Documentation
