@@ -43,10 +43,6 @@ npx cursor-claude-setup-2025
 
 Don't have Node? See `docs/INSTALL-NODE.md` or ask Cursor/Claude Code to help you install it.
 
-**After running the installer, you'll need**:
-- Cursor IDE ([download](https://cursor.com))
-- Claude Code CLI ([install](https://docs.claude.com/en/docs/claude-code/quickstart))
-
 ---
 
 ## Files Created
@@ -145,10 +141,6 @@ Quick version:
 - **Exa** - AI web search (needs API key)
 - **Firecrawl** - Web scraping (needs API key)
 - **Serena** - Code navigation (no key needed)
-
-**Slash Commands** (2):
-- `/generate-prp` - Create implementation plans
-- `/execute-prp` - Execute plans with validation
 
 **BMAD Framework** (optional, enabled by default):
 - 12 AI agents (Analyst, PM, Architect, SM, DEV, etc.)
